@@ -6,4 +6,4 @@ UML diagram: work in progress
 
 ## Gameplay
 
-![Gameplay Screenshot](./Image/gameplay.png)
+![Gameplay Screenshot](./Image/Gameplay.png)
