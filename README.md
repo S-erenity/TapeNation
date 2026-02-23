@@ -6,6 +6,4 @@ UML diagram: work in progress
 
 ## Gameplay
 
-<p align="center">
-  <img Image="Gameplay.png" width="700">
-</p>
+![Gameplay Screenshot](./Image/gameplay.png)
