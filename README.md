@@ -7,5 +7,5 @@ UML diagram: work in progress
 ## Gameplay
 
 <p align="center">
-  <img src="Gameplay.png" width="700">
+  <img Image="Gameplay.png" width="700">
 </p>
