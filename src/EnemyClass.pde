@@ -30,7 +30,7 @@ class Enemy extends Entity {
       x += (dx / mag) * CHASE_SPEED;
       y += (dy / mag) * CHASE_SPEED;
     } else {
-      // Wander: change direction periodically
+      
       if (millis() - wanderChangeTime > wanderInterval) {
         wanderAngle      = random(TWO_PI);
         wanderChangeTime = millis();
@@ -38,7 +38,7 @@ class Enemy extends Entity {
       x += cos(wanderAngle) * WANDER_SPEED;
       y += sin(wanderAngle) * WANDER_SPEED;
 
-      // Bounce off walls
+      
       if (x - radius < bx || x + radius > bx + bw) {
         wanderAngle = PI - wanderAngle;
         clampToBounds();
