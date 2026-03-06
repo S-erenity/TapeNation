@@ -47,7 +47,7 @@ class GameManager {
     if (waveInProgress && enemiesSpawned >= currentWaveSize() && enemies.isEmpty()) {
       waveInProgress = false;
       lastWaveTime   = millis();
-      scoreManager.saveHighScore();   // persist to file at end of each wave
+      scoreManager.saveHighScore();   
     }
   }
 
