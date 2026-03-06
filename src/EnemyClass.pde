@@ -1,7 +1,3 @@
-// =====================================================================
-//  EnemyClass.pde
-//  Extends Entity. Wanders randomly, chases player within aggro range.
-// =====================================================================
 
 class Enemy extends Entity {
 
@@ -20,8 +16,7 @@ class Enemy extends Entity {
     wanderAngle = random(TWO_PI);
   }
 
-  // ── Update (satisfies abstract contract from Entity) ───────────────
-  // Overloaded: main loop calls update(Player) for AI logic
+  
   void update() { /* unused — GameManager calls update(Player) */ }
 
   void update(Player p) {
@@ -55,7 +50,7 @@ class Enemy extends Entity {
     }
   }
 
-  // ── Display (satisfies Drawable interface) ─────────────────────────
+
   void display() { /* unused — GameManager calls display(Player) */ }
 
   void display(Player p) {
@@ -67,20 +62,20 @@ class Enemy extends Entity {
       ellipse(x, y, AGGRO_RANGE * 2, AGGRO_RANGE * 2);
     }
 
-    // Chase glow
+  
     if (aggroed) {
       noStroke();
       fill(255, 0, 0, 50);
       ellipse(x, y, (radius + 12) * 2, (radius + 12) * 2);
     }
 
-    // Body
+
     stroke(180, 0, 0);
     strokeWeight(2);
     fill(aggroed ? color(255, 40, 40) : color(200, 60, 60));
     ellipse(x, y, radius * 2, radius * 2);
 
-    // Eye always faces player
+  
     float angle = atan2(p.y - y, p.x - x);
     fill(255);
     noStroke();
@@ -88,7 +83,7 @@ class Enemy extends Entity {
             y + sin(angle) * (radius * 0.45), 5, 5);
   }
 
-  // Uses inherited overlaps() from Entity for hit detection
+  
   boolean hits(Player p) {
     return overlaps(p);
   }
