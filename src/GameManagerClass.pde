@@ -8,15 +8,15 @@ class GameManager {
   
   int     waveNumber     = 0;
   int     enemiesPerWave = 3;
-  int     waveInterval   = 8000;   // ms between waves
-  int     lastWaveTime   = -8000;  // negative so first wave fires immediately
+  int     waveInterval   = 8000;   
+  int     lastWaveTime   = -8000;  
   boolean waveInProgress = false;
   int     enemiesSpawned = 0;
   int     spawnDelay     = 800;
   int     lastSpawnTime  = 0;
 
   Player           player;
-  ArrayList<Enemy> enemies;   // collection
+  ArrayList<Enemy> enemies;   
 
   WaveBar      waveBar;
   ScoreManager scoreManager;
