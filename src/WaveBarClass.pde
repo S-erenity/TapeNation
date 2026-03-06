@@ -1,7 +1,3 @@
-// =====================================================================
-//  WaveBarClass.pde
-//  HUD element. Displays wave countdown (green) or active wave (red).
-// =====================================================================
 
 class WaveBar {
 
@@ -27,22 +23,18 @@ class WaveBar {
   }
 
   void display(int waveNumber, boolean waveInProgress, int waveInterval) {
-    // Track background
     noStroke();
     fill(60);
     rect(x, y, w, h, 4);
 
-    // Fill — green = countdown, red = wave active
     fill(spawning ? color(255, 80, 80) : color(80, 200, 120));
     rect(x, y, w * fillRatio, h, 4);
 
-    // Border
     stroke(160);
     strokeWeight(1.5);
     noFill();
     rect(x, y, w, h, 4);
 
-    // Label text
     fill(255);
     noStroke();
     textSize(13);
