@@ -1,16 +1,11 @@
-// =====================================================================
-//  GameManagerClass.pde
-//  Orchestrates the map, wave system, entities, and HUD.
-//  Demonstrates: ArrayList collection, enhanced for loop
-// =====================================================================
 
 class GameManager {
 
-  // ── Map ────────────────────────────────────────────────────────────
+  
   final int MAP_X = 50,  MAP_Y = 50;
   final int MAP_W = 800, MAP_H = 560;
 
-  // ── Wave state ─────────────────────────────────────────────────────
+  
   int     waveNumber     = 0;
   int     enemiesPerWave = 3;
   int     waveInterval   = 8000;   // ms between waves
@@ -20,11 +15,9 @@ class GameManager {
   int     spawnDelay     = 800;
   int     lastSpawnTime  = 0;
 
-  // ── Entities ───────────────────────────────────────────────────────
   Player           player;
   ArrayList<Enemy> enemies;   // collection
 
-  // ── HUD helpers ────────────────────────────────────────────────────
   WaveBar      waveBar;
   ScoreManager scoreManager;
 
@@ -36,12 +29,10 @@ class GameManager {
     scoreManager = new ScoreManager();
   }
 
-  // ── Per-frame update ───────────────────────────────────────────────
   void update() {
     handleWaves();
     player.update();
 
-    // Enhanced for loop — iterating the enemies collection
     for (int i = enemies.size() - 1; i >= 0; i--) {
       Enemy e = enemies.get(i);
       e.update(player);
@@ -53,7 +44,6 @@ class GameManager {
       }
     }
 
-    // Wave complete when all enemies spawned and defeated
     if (waveInProgress && enemiesSpawned >= currentWaveSize() && enemies.isEmpty()) {
       waveInProgress = false;
       lastWaveTime   = millis();
@@ -61,7 +51,6 @@ class GameManager {
     }
   }
 
-  // ── Wave logic ─────────────────────────────────────────────────────
   void handleWaves() {
     if (!waveInProgress) {
       float elapsed = millis() - lastWaveTime;
@@ -101,11 +90,9 @@ class GameManager {
     enemiesSpawned++;
   }
 
-  // ── Rendering ──────────────────────────────────────────────────────
   void display() {
     drawMap();
 
-    // Enhanced for loop over enemies collection
     for (Enemy e : enemies) {
       e.display(player);
     }
