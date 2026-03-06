@@ -1,10 +1,4 @@
-// =====================================================================
-//  ScoreManagerClass.pde
-//  Tracks current score and high score.
-//  Saves/loads high score from a .txt file — demonstrates:
-//    • File I/O  (BufferedReader / PrintWriter)
-//    • Exception handling  (try / catch)
-// =====================================================================
+
 
 class ScoreManager {
 
@@ -17,7 +11,6 @@ class ScoreManager {
     loadHighScore();
   }
 
-  // Add points when an enemy is defeated
   void addScore(int points) {
     score += points;
     if (score > highScore) {
@@ -29,7 +22,6 @@ class ScoreManager {
     score = 0;
   }
 
-  // ── File I/O with exception handling ──────────────────────────────
 
   void saveHighScore() {
     try {
@@ -53,13 +45,11 @@ class ScoreManager {
       reader.close();
       println("High score loaded: " + highScore);
     } catch (Exception e) {
-      // File doesn't exist yet on first run — that's fine
       println("No save file found, starting fresh.");
       highScore = 0;
     }
   }
 
-  // ── HUD rendering ─────────────────────────────────────────────────
 
   void display(float x, float y) {
     fill(255);
