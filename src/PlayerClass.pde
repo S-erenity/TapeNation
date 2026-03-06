@@ -1,7 +1,4 @@
-// =====================================================================
-//  PlayerClass.pde
-//  Extends Entity. Handles WASD/arrow movement, damage, and rendering.
-// =====================================================================
+
 
 class Player extends Entity {
 
@@ -16,7 +13,6 @@ class Player extends Entity {
     super(startX, startY, 16, bx, by, bw, bh);
   }
 
-  // ── Update (satisfies abstract contract from Entity) ───────────────
   void update() {
     if (movingUp)    y -= SPEED;
     if (movingDown)  y += SPEED;
@@ -25,14 +21,12 @@ class Player extends Entity {
     clampToBounds();
   }
 
-  // ── Display (satisfies Drawable interface) ─────────────────────────
   void display() {
     // Soft glow
     noStroke();
     fill(255, 255, 255, 40);
     ellipse(x, y, (radius + 10) * 2, (radius + 10) * 2);
 
-    // Body
     stroke(220);
     strokeWeight(2);
     fill(255);
@@ -53,7 +47,6 @@ class Player extends Entity {
     }
   }
 
-  // ── Input ──────────────────────────────────────────────────────────
   void onKeyPressed(int k) {
     if (k == UP    || k == 'W' || k == 'w') movingUp    = true;
     if (k == DOWN  || k == 'S' || k == 's') movingDown  = true;
@@ -68,7 +61,6 @@ class Player extends Entity {
     if (k == RIGHT || k == 'D' || k == 'd') movingRight = false;
   }
 
-  // ── Health ─────────────────────────────────────────────────────────
   void takeDamage(int amount) {
     hp = max(0, hp - amount);
   }
