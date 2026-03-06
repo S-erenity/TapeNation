@@ -8,12 +8,19 @@ Ran via Processing.
 ## Year 2 concepts:
 
 Collections — ArrayList<Enemy>
+
 Enhanced for loop — for (Enemy e : enemies)
+
 Exception handling — try/catch in ScoreManager
+
 File I/O — BufferedReader / PrintWriter in ScoreManager
+
 Multiple classes with logical responsibilities
+
 Inheritance — Player extends Entity, Enemy extends Entity
+
 Abstract class — Entity
+
 Interface — Drawable
 
 ## Class Diagram:
