@@ -22,7 +22,6 @@ class Player extends Entity {
   }
 
   void display() {
-    // Soft glow
     noStroke();
     fill(255, 255, 255, 40);
     ellipse(x, y, (radius + 10) * 2, (radius + 10) * 2);
@@ -32,7 +31,6 @@ class Player extends Entity {
     fill(255);
     ellipse(x, y, radius * 2, radius * 2);
 
-    // Direction dot
     float dx = 0, dy = 0;
     if (movingRight) dx =  1;
     if (movingLeft)  dx = -1;
