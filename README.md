@@ -17,7 +17,7 @@ Multiple classes with logical responsibilities
 
 Inheritance — Player extends Entity, Enemy extends Entity
 
-## What is inherited from Entity:
+## What player and enemy inherits from Entity:
 
 ### x, y — position on screen
 
