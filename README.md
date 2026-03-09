@@ -13,8 +13,6 @@ Enhanced for loop — for (Enemy e : enemies)
 
 Exception handling — try/catch in ScoreManager
 
-File I/O — BufferedReader / PrintWriter in ScoreManager
-
 Multiple classes with logical responsibilities
 
 Inheritance — Player extends Entity, Enemy extends Entity
