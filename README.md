@@ -31,7 +31,7 @@ Abstract class — Entity
 
 Interface — Drawable
 
-## Class Diagram:
+## Class Diagram (NOT UPDATED):
 
 ![Gameplay Screenshot](./Image/Classdiagram.png)
 
