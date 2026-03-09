@@ -19,11 +19,13 @@ Multiple classes with logical responsibilities
 
 Inheritance — Player extends Entity, Enemy extends Entity
 
-x, y — position on screen
+# What is inherited from Entity:
 
-radius — size of the circle
+## x, y — position on screen
 
-bx, by, bw, bh — the map boundary values used for clamping
+## radius — size of the circle
+
+## bx, by, bw, bh — the map boundary values used for clamping
 
 Abstract class — Entity
 
