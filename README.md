@@ -27,7 +27,7 @@ Inheritance — Player extends Entity, Enemy extends Entity
 
 Abstract class — Entity
 
-Interface — Drawable
+Interface — Drawable (guarantees a display method for every class that implements it)
 
 ## Class Diagram (NOT UPDATED):
 
